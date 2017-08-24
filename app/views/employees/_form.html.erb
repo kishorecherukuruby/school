@@ -1,0 +1,12 @@
+<div class = "error" >
+	<% if @employee.errors.any? %>
+		<% @employee.errors.full_messages.each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+</div>
+<p>Name <%= f.text_field :name %></p>
+<p>Age <%= f.number_field :age %></p>
+<p>DOB <%= f.date_field :dob %></p>
+<p>Gender <%= f.text_field :gender %></p>
+<p><%= f.submit %></p>

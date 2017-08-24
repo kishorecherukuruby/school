@@ -1,0 +1,12 @@
+<%= form_for @teacher do |f| %>
+<% if @teacher.errors.any? %>
+	<% @teacher.errors.full_messages.each do |error| %>
+		<%= error %>
+	<% end %>
+<% end %>
+	<p>First Name: <%= f.text_field :fname %></p>
+	<p>Last Name : <%= f.text_field :lname %></p>
+	 <%= f.hidden_field :full_name %>
+	<p>Age : <%= f.number_field :age %></p>
+	<p><%= f.submit %></p>
+<% end %>

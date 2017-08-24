@@ -1,0 +1,22 @@
+<table border=1>
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>DOB</th>
+			<th>Actions</th>
+		</tr>	
+<% @employees.each do |emp| %>
+	<tr>
+	<td><%= emp.name %></td>
+	<td><%= emp.age %></td>
+	<td><%= emp.dob %></td>
+	<td><%= link_to "show", employee_url(emp) %>
+		<%= link_to "edit", edit_employee_path(emp) %>
+		<%= link_to "delete", employee_url(emp), method: "delete", data: {confirm: "Are you sure?"} %>
+	</td>
+	</tr>
+<% end %>
+	</tbody>
+</table>
+<p><%= link_to "New Employee", new_employee_path %></p>

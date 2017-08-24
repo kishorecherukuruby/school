@@ -1,0 +1,10 @@
+<% @teachers.each do |teacher| %>
+	<p>FirstName: <%= teacher.fname %>
+	   LastName : <%= teacher.lname %>
+	   FullName : <%= teacher.full_name %>
+	   Age : <%= teacher.age %>
+	   SeniorCitizen : <%= teacher.senior_citizen %>
+	</p>
+<% end %>
+
+<%= link_to "Back", new_teacher_path %>
