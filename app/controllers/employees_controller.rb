@@ -15,6 +15,8 @@ class EmployeesController < ApplicationController
 
   def show
   end
+  def dummy 
+  end
 
   def index
     @employees = Employee.all
@@ -25,7 +27,7 @@ class EmployeesController < ApplicationController
 
   def update
     if @employee.update_attributes(employee_params)
-      redirect_to employees_index_path
+      redirect_to employees_path
     else
       render 'edit'
     end
